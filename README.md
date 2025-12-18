@@ -4,28 +4,50 @@
 
 A centralized archive of Security Advisories, CVEs, and Proof-of-Concepts (PoCs) for security vulnerabilities discovered by **Aditya Singh (Nixon-H)**.
 
-Each subdirectory corresponds to a specific CVE ID and contains the technical details, impact analysis, and original Proof of Concept (PoC) referenced in the official disclosure.
+This repository serves as a permanent record of identified vulnerabilities. Findings are categorized by their remediation status (Patched vs. Unpatched) to assist security teams in prioritization.
 
 ---
 
-## ⚠️ Disclaimer
-The information and code provided in this repository are for **educational purposes and security research reference only**. These advisories are documented to help vendors and administrators understand and mitigate these vulnerabilities. The author is not responsible for any misuse of the information provided herein.
+## ⚠️ Disclosure Policy & Disclaimer
+The information provided here is for **educational purposes and security research reference only**.
+* **Patched:** Vulnerabilities where the vendor has released a fix.
+* **Unpatched:** Vulnerabilities currently without a known fix or in the grace period.
+
+The author is not responsible for any misuse of the information provided herein.
 
 ---
 
-## 📂 Advisory Index
+## 🟢 Patched Vulnerabilities (Resolved)
+*Vendor fixes are available. These are archived for historical reference and analysis.*
 
-| CVE ID | Severity | Vendor / Product | Vulnerability Type |
-| :--- | :--- | :--- | :--- |
-| **[CVE-2025-68434](./CVE-2025-68434)** | 🔴 High | OpenSourcePOS | CSRF (Unauthorized Admin Creation) |
-| **[CVE-2025-68147](./CVE-2025-68147)** | 🟠 Medium | OpenSourcePOS | Stored Cross-Site Scripting (XSS) |
-
-*(Updates are pushed following the responsible disclosure window.)*
+| CVE ID | Severity | Vendor / Product | Vulnerability Type | PoC Link |
+| :--- | :--- | :--- | :--- | :--- |
+| **[CVE-2025-68434](./Patched/CVE-2025-68434)** | 🔴 High | OpenSourcePOS | CSRF (Admin Account Takeover) | [View PoC](./Patched/CVE-2025-68434) |
+| **[CVE-2025-68147](./Patched-CVE/CVE-2025-68147)** | 🟠 Medium | OpenSourcePOS | Stored Cross-Site Scripting (XSS) | [View PoC](./Patched-CVE/CVE-2025-68147) |
 
 ---
 
-## 🔗 Contact & References
+## 🔴 Unpatched Vulnerabilities (Active Threats)
+*These vulnerabilities may not yet have a vendor fix available. Proceed with caution.*
+
+| CVE ID | Severity | Vendor / Product | Vulnerability Type | PoC Link |
+| :--- | :--- | :--- | :--- | :--- |
+| **[CVE-2025-XXXX](./Unpatched/CVE-2025-XXXX)** | 🟣 Critical | VendorName | XXXXXXXXXXX| [View PoC](./Unpatched/CVE-2025-XXXX) |
+
+
+---
+
+## 📊 Severity Legend
+| Icon | Level | CVSS Range |
+| :---: | :--- | :--- |
+| 🟣 | **Critical** | 9.0 - 10.0 |
+| 🔴 | **High** | 7.0 - 8.9 |
+| 🟠 | **Medium** | 4.0 - 6.9 |
+| 🔵 | **Low** | 0.1 - 3.9 |
+
+---
+
+## 🔗 Contact
 * **Researcher:** Aditya Singh
 * **Handle:** [Nixon-H](https://github.com/Nixon-H)
 * **Email:** Nixon-HByte@proton.me
-* **Portfolio:** [Nixon-H Repositories](https://github.com/Nixon-H?tab=repositories)
